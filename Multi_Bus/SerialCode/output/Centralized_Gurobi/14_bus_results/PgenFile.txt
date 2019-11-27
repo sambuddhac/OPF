@@ -1,0 +1,8 @@
+
+The Optimal Objective value (Generation Dispatch cost) is: 8672.11
+
+****************** GENERATORS' POWER GENERATION LEVELS (MW) *********************
+GENERATOR ID	GENERATOR MW
+1	161.694 MW
+2	97.3059 MW
+Finished writing Power Generation

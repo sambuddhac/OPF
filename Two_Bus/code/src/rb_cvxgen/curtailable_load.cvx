@@ -1,0 +1,22 @@
+# NOT USED ANYMORE!
+
+dimensions
+  T = 20
+end
+
+parameters
+  rho positive
+  pdes positive
+  gamma positive
+  v[t], t=0..T
+end
+
+variables 
+  p[t], t=0..T
+end
+
+minimize
+  sum[t=0..T](gamma*pos(pdes - p[t]) + rho/2*square(p[t] - v[t]))
+subject to
+  p[t] >= 0, t=0..T
+end

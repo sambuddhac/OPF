@@ -1,0 +1,203 @@
+
+Total Number of Structural Constraints (Rows) is: 23
+
+Total Number of Decision Variables (Columns) is: 7
+
+Total number of columns after accounting for Power Generation continuous variables for different generators: 3
+
+Total number of columns after accounting for Voltage Phase Angles continuous variables for different intrazonal nodes: 8
+
+Total Number of columns for generation, angles: 7
+
+Decision Variables and Objective Function defined
+
+Total Number of columns: 7
+
+Non-zero elements of A matrix
+
+Row Number	Column Number	Non-zero Entry	From Reactance	ToReactance
+
+Coefficients for the supply-demand balance constraints
+Constraints corresponding to Supply-Demand Balance right hand side
+
+Generation	1
+
+1	1	1
+
+Intrazonal Node Angles	1
+
+1	3	-20.8333	-20.8333	-0
+
+Connected Intrazonal Node Angles	1
+
+1	4	16.6667
+
+1	5	4.16667
+Connected load to node 1 is 0 MW
+1	0 MW
+
+Generation	2
+
+2	2	1
+
+Intrazonal Node Angles	2
+
+2	4	-2.77778	-19.4444	16.6667
+
+Connected Intrazonal Node Angles	2
+
+2	3	-16.6667
+
+2	5	5.55556
+
+2	6	5.55556
+
+2	7	8.33333
+Connected load to node 2 is -20 MW
+2	20 MW
+
+Generation	3
+
+Intrazonal Node Angles	3
+
+3	5	-23.6111	-33.3333	9.72222
+
+Connected Intrazonal Node Angles	3
+
+3	3	-4.16667
+
+3	4	-5.55556
+
+3	6	33.3333
+Connected load to node 3 is -45 MW
+3	45 MW
+
+Generation	4
+
+Intrazonal Node Angles	4
+
+4	6	34.7222	-4.16667	38.8889
+
+Connected Intrazonal Node Angles	4
+
+4	4	-5.55556
+
+4	5	-33.3333
+
+4	7	4.16667
+Connected load to node 4 is -40 MW
+4	40 MW
+
+Generation	5
+
+Intrazonal Node Angles	5
+
+5	7	12.5	-0	12.5
+
+Connected Intrazonal Node Angles	5
+
+5	4	-8.33333
+
+5	6	-4.16667
+Connected load to node 5 is -60 MW
+5	60 MW
+
+Coefficients corresponding to lower generation limits
+6	1	1	0
+6	0 MW
+7	2	1	0
+7	0 MW
+
+Coefficients corresponding to upper generation limits
+8	1	1	3.324
+8	332.4 MW
+9	2	1	1.4
+9	140 MW
+
+Coefficients corresponding to intra-zone Line Forward Flow Limit Constraints
+
+10	3	16.6667	16.6667
+
+10	4	-16.6667	-	-16.6667
+10	100000 MW
+
+11	3	4.16667	4.16667
+
+11	5	-4.16667	-	-4.16667
+11	100000 MW
+
+12	4	5.55556	5.55556
+
+12	5	-5.55556	-	-5.55556
+12	100000 MW
+
+13	4	5.55556	5.55556
+
+13	6	-5.55556	-	-5.55556
+13	100000 MW
+
+14	4	8.33333	8.33333
+
+14	7	-8.33333	-	-8.33333
+14	100000 MW
+
+15	5	33.3333	33.3333
+
+15	6	-33.3333	-	-33.3333
+15	100000 MW
+
+16	6	4.16667	4.16667
+
+16	7	-4.16667	-	-4.16667
+16	100000 MW
+
+Coefficients corresponding to intra-zone Line Reverse Flow Limit Constraints
+
+17	3	16.6667	16.6667
+
+17	4	-16.6667	-	-16.6667
+17	-100000 MW
+
+18	3	4.16667	4.16667
+
+18	5	-4.16667	-	-4.16667
+18	-100000 MW
+
+19	4	5.55556	5.55556
+
+19	5	-5.55556	-	-5.55556
+19	-100000 MW
+
+20	4	5.55556	5.55556
+
+20	6	-5.55556	-	-5.55556
+20	-100000 MW
+
+21	4	8.33333	8.33333
+
+21	7	-8.33333	-	-8.33333
+21	-100000 MW
+
+22	5	33.3333	33.3333
+
+22	6	-33.3333	-	-33.3333
+22	-100000 MW
+
+23	6	4.16667	4.16667
+
+23	7	-4.16667	-	-4.16667
+23	-100000 MW
+
+Constraint bounds (rows) Specified
+
+Total number of rows: 23
+
+Coefficient Matrix specified
+
+Total time taken to define the rows, columns, objective and populate the coefficient matrix = 0.001781 s 
+
+The solution to the problem is OPTIMAL.
+
+The Optimal Objective value (Generation Dispatch cost) is: 4299.45
+
+Total time taken to solve the MILP Line Construction Decision Making Problem instance and retrieve the results = 0.003939 s 

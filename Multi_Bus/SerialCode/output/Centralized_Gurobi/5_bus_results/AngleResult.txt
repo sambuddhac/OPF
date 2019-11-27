@@ -1,0 +1,9 @@
+
+****************** INTERNAL NODE VOLTAGE PHASE ANGLE VALUES *********************
+NODE ID	VOLTAGE PHASE ANGLE
+1	3.09559
+2	3.03635
+3	2.99467
+4	2.9886
+5	2.97244
+Finished writing Internal Node Voltage Phase Angles

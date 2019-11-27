@@ -1,0 +1,11 @@
+
+****************** INTERNAL TRANSMISSION LINES FLOWS *********************
+TRANSMISSION LINE ID	MW FLOW
+1	98.7212 MW
+2	42.0497 MW
+3	23.1592 MW
+4	26.5274 MW
+5	53.2637 MW
+6	20.2089 MW
+7	6.73631 MW
+Finished writing Internal Transmission lines' MW Flows

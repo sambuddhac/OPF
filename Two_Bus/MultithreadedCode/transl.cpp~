@@ -1,0 +1,157 @@
+// Member functions for class transmissionLine.
+#include <iostream>
+#include <iomanip>
+
+// include transmissionLine class definition from transl.h, Node class definition from node.h, and solver class definition from transolver.h
+#include "transl.h"
+#include "node.h"
+#include "transolver.h"
+
+using namespace std;
+
+transmissionLine::transmissionLine( int idOfTransl, Node *nodeConnt1, Node *nodeConnt2, Transolver &paramOfTline ) // constructor begins
+	: translID( idOfTransl ),
+	  connNodet1Ptr( nodeConnt1 ),
+	  connNodet2Ptr( nodeConnt2 ),
+	  tranSolver( paramOfTline )
+{
+	cout << "\nInitializing the parameters of the transmission line with ID: " << translID << endl;
+	connNodet1Ptr->settConn(); // increments the txr line connection variable to node 1
+	connNodet2Ptr->settConn(); // increments the txr line connection variable to node 2
+	setTranData(); // calls setTranData member function to set the parameter values
+
+} // constructor ends
+
+transmissionLine::~transmissionLine() // destructor
+{
+	//cout << "\nThe transmission line object having ID " << translID << " have been destroyed.\n";
+
+} // end of destructor
+
+int transmissionLine::getTranslID() // function gettranslID begins
+{
+	return translID; // returns the ID of the generator object
+} // end of gettranslID function
+
+int transmissionLine::getTranslNodeID1() // function getGenNodeID begins
+{
+	return connNodet1Ptr->getNodeID(); // returns the ID number of the node to which the generator object is connected
+} // end of getGenNodeID function
+
+int transmissionLine::getTranslNodeID2() // function getGenNodeID begins
+{
+	return connNodet2Ptr->getNodeID(); // returns the ID number of the node to which the generator object is connected
+} // end of getGenNodeID function
+
+void transmissionLine::setTranData() // member function to set parameter values of transmission lines
+{
+	v1 = 0.0; // Initialize the Lagrange multiplier corresponding to end-1 voltage angle constraint to zero
+	v2 = 0.0; // Initialize the Lagrange multiplier corresponding to end-2 voltage angle constraint to zero
+	//double pavi1 = 0.0;
+	//double pavi2 = 0.0;
+} // end function for setting parameter values
+
+void transmissionLine::tpowerangleMessage( double tRho, double Pprevit1, double Pnetavg1, double uprev1, double vprevavg1, double Aprevavg1, double vprev1,  double Pprevit2, double Pnetavg2, double uprev2, double vprevavg2, double Aprevavg2, double vprev2 ) //const // function tpowerangleMessage begins
+{
+	tranSolver.mainsolve( tRho, Pprevit1, Pnetavg1, uprev1, vprevavg1, Aprevavg1, vprev1, Pprevit2, Pnetavg2, uprev2, vprevavg2, Aprevavg2, vprev2 ); // calls the transmission line optimization solver
+	double Pt1 = tranSolver.getPSol1(); // get the transmission line end-1 Power iterate
+	double Thetat1 = tranSolver.getThetaSol1(); // get the transmission line end-1 voltage angle iterate
+	double Pt2 = tranSolver.getPSol2(); // get the transmission line end-2 Power iterate
+	double Thetat2 = tranSolver.getThetaSol2(); // get the transmission line end-2 voltage angle iterate
+	connNodet1Ptr->powerangleMessage( Pt1, v1, Thetat1 ); // passes to node object at end 1 the corresponding iterates of power, angle and v
+	connNodet2Ptr->powerangleMessage( Pt2, v2, Thetat2 ); // passes to node object at end 2 the corresponding iterates of power, angle and v
+} // function tpowerangleMessage ends
+
+double transmissionLine::translPower1() //const // function translPower1 begins
+{
+	double Pt1 = tranSolver.getPSol1();
+	return Pt1; // returns the Pt1 iterate
+} // function translPower1 ends
+
+double transmissionLine::translPower2() //const // function translPower2 begins
+{
+	double Pt2 = tranSolver.getPSol2();
+	return Pt2; // returns the Pt2 iterate
+} // function translPower2 ends
+
+double transmissionLine::calcPtilde1() //const // function calcPtilde1 begins
+{
+	double Pt1 = tranSolver.getPSol1();
+	double P_avg1 = connNodet1Ptr->PavMessage(); // Gets average power for end-1 from the corresponding node object
+	double Ptilde1 = Pt1 - P_avg1; // calculates the difference between power iterate and average
+	return Ptilde1; // returns the difference
+} // function calcPtilde1 ends
+
+double transmissionLine::calcPavInit1() const // function calcPavInit1 begins
+{
+	return connNodet1Ptr->devpinitMessage(); // seeks the initial Ptilde from the node at end 1
+} // function calcPavInit1 ends
+
+double transmissionLine::calcPtilde2() //const // function calcPtilde2 begins
+{
+	double Pt2 = tranSolver.getPSol2();
+	double P_avg2 = connNodet2Ptr->PavMessage(); // Gets average power for end-2 from the corresponding node object
+	double Ptilde2 = Pt2 - P_avg2; // calculates the difference between power iterate and average
+	return Ptilde2; // returns the difference
+} // function calcPtilde2 ends
+
+double transmissionLine::calcPavInit2() const // function calcPavInit2 begins
+{
+	return connNodet2Ptr->devpinitMessage(); // seeks the initial Ptilde from the node at end 2
+} // function calcPavInit2 ends
+
+
+double transmissionLine::getu1() const // function getu1 begins
+{
+	double u1 = connNodet1Ptr->uMessage(); // gets the value of the price corresponding to power balance from node
+	return u1; // returns the price
+} // function getu1 ends
+
+double transmissionLine::getu2() const // function getu2 begins
+{
+	double u2 = connNodet2Ptr->uMessage(); // gets the value of the price corresponding to power balance from node
+	return u2; // returns the price
+} // function getu2 ends
+
+double transmissionLine::calcThetatilde1() //const // function calcThetatilde1 begins
+{
+	double Thetat1 = tranSolver.getThetaSol1();
+	double Theta_avg1 = connNodet1Ptr->ThetaavMessage(); // get the average voltage angle at the particular node
+	double Theta_tilde1 = Thetat1 - Theta_avg1; // claculate the deviation between the voltage angle of the device and the average
+	return Theta_tilde1; // return the deviation
+} // function calcThetatilde1 ends
+
+double transmissionLine::calcThetatilde2() //const // function calcThetatilde2 begins
+{
+	double Thetat2 = tranSolver.getThetaSol2();
+	double Theta_avg2 = connNodet2Ptr->ThetaavMessage(); // get the average voltage angle at the particular node
+	double Theta_tilde2 = Thetat2 - Theta_avg2; // claculate the deviation between the voltage angle of the device and the average
+	return Theta_tilde2; // return the deviation
+} // function calcThetatilde2 ends
+
+double transmissionLine::calcvtilde1() const // function calcvtilde1 begins
+{
+	double v_avg1 = connNodet1Ptr->vavMessage(); // get the average of the Lagrange multiplier corresponding to voltage angle balance 
+	double v_tilde1 = v1 - v_avg1; // calculate the deviation of the node Lagrange multiplier to the average
+	return v_tilde1; // return the deviation
+} // function calcvtilde1 ends
+
+double transmissionLine::calcvtilde2() const // function calcvtilde2 begins
+{
+	double v_avg2 = connNodet2Ptr->vavMessage(); // get the average of the Lagrange multiplier corresponding to voltage angle balance 
+	double v_tilde2 = v2 - v_avg2; // calculate the deviation of the node Lagrange multiplier to the average
+	return v_tilde2; // return the deviation
+} // function calcvtilde2 ends
+
+double transmissionLine::getv1() //const // function getv1 begins
+{
+	v1 = calcvtilde1() + calcThetatilde1(); // Calculate the value of the Lagrange multiplier corresponding to angle constraint
+	return v1; // return the voltage angle price
+} // function getv1 ends
+
+double transmissionLine::getv2() //const // function getv2 begins
+{
+	v2 = calcvtilde2() + calcThetatilde2(); // Calculate the value of the Lagrange multiplier corresponding to angle constraint
+	return v2; // Calculate the value of the Lagrange multiplier corresponding to angle constraint
+} // function getv2 ends	
+

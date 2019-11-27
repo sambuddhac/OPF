@@ -1,0 +1,4 @@
+all:
+	g++ -std=c++0x -pthread -g node.cpp generator.cpp load.cpp transl.cpp network.cpp maintwoserialOPF.cpp gensolver.cpp transolver.cpp loadsolver.cpp -o exec
+clean:
+	rm -rf *o exec

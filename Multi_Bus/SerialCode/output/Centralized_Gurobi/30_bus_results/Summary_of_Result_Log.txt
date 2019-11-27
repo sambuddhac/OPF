@@ -1,0 +1,953 @@
+
+Total Number of Structural Constraints (Rows) is: 124
+
+Total Number of Decision Variables (Columns) is: 36
+
+Total number of columns after accounting for Power Generation continuous variables for different generators: 7
+
+Total number of columns after accounting for Voltage Phase Angles continuous variables for different intrazonal nodes: 37
+
+Total Number of columns for generation, angles: 36
+
+Decision Variables and Objective Function defined
+
+Total Number of columns: 36
+
+Non-zero elements of A matrix
+
+Row Number	Column Number	Non-zero Entry	From Reactance	ToReactance
+
+Coefficients for the supply-demand balance constraints
+Constraints corresponding to Supply-Demand Balance right hand side
+
+Generation	1
+
+1	1	1
+
+Intrazonal Node Angles	1
+
+1	7	-23.4446	-23.4446	-0
+
+Connected Intrazonal Node Angles	1
+
+1	8	17.3913
+
+1	9	6.05327
+Connected load to node 1 is 0 MW
+1	0 MW
+
+Generation	2
+
+2	2	1
+
+Intrazonal Node Angles	2
+
+2	8	0.919238	-16.4721	17.3913
+
+Connected Intrazonal Node Angles	2
+
+2	7	-17.3913
+
+2	10	5.75705
+
+2	11	5.04286
+
+2	12	5.67215
+Connected load to node 2 is -21.7 MW
+2	21.7 MW
+
+Generation	3
+
+Intrazonal Node Angles	3
+
+3	9	-20.332	-26.3852	6.05327
+
+Connected Intrazonal Node Angles	3
+
+3	7	-6.05327
+
+3	10	26.3852
+Connected load to node 3 is -2.4 MW
+3	2.4 MW
+
+Generation	4
+
+Intrazonal Node Angles	4
+
+4	10	4.08144	-28.0608	32.1423
+
+Connected Intrazonal Node Angles	4
+
+4	8	-5.75705
+
+4	9	-26.3852
+
+4	12	24.1546
+
+4	18	3.90625
+Connected load to node 4 is -7.6 MW
+4	7.6 MW
+
+Generation	5
+
+Intrazonal Node Angles	5
+
+5	11	-3.57783	-8.62069	5.04286
+
+Connected Intrazonal Node Angles	5
+
+5	8	-5.04286
+
+5	13	8.62069
+Connected load to node 5 is 0 MW
+5	0 MW
+
+Generation	6
+
+Intrazonal Node Angles	6
+
+6	12	-29.4787	-59.3054	29.8267
+
+Connected Intrazonal Node Angles	6
+
+6	8	-5.67215
+
+6	10	-24.1546
+
+6	13	12.1951
+
+6	14	23.8095
+
+6	15	4.80769
+
+6	16	1.79856
+
+6	34	16.6945
+Connected load to node 6 is 0 MW
+6	0 MW
+
+Generation	7
+
+Intrazonal Node Angles	7
+
+7	13	20.8158	-0	20.8158
+
+Connected Intrazonal Node Angles	7
+
+7	11	-8.62069
+
+7	12	-12.1951
+Connected load to node 7 is -22.8 MW
+7	22.8 MW
+
+Generation	8
+
+Intrazonal Node Angles	8
+
+8	14	18.8095	-5	23.8095
+
+Connected Intrazonal Node Angles	8
+
+8	12	-23.8095
+
+8	34	5
+Connected load to node 8 is -30 MW
+8	30 MW
+
+Generation	9
+
+Intrazonal Node Angles	9
+
+9	15	-9.09091	-13.8986	4.80769
+
+Connected Intrazonal Node Angles	9
+
+9	12	-4.80769
+
+9	16	9.09091
+
+9	17	4.80769
+Connected load to node 9 is 0 MW
+9	0 MW
+
+Generation	10
+
+Intrazonal Node Angles	10
+
+10	16	-25.7518	-36.6413	10.8895
+
+Connected Intrazonal Node Angles	10
+
+10	12	-1.79856
+
+10	15	-9.09091
+
+10	23	11.8343
+
+10	26	4.78469
+
+10	27	13.3511
+
+10	28	6.67111
+Connected load to node 10 is -5.8 MW
+10	5.8 MW
+
+Generation	11
+
+Intrazonal Node Angles	11
+
+11	17	4.80769	-0	4.80769
+
+Connected Intrazonal Node Angles	11
+
+11	15	-4.80769
+Connected load to node 11 is 0 MW
+11	0 MW
+
+Generation	12
+
+Intrazonal Node Angles	12
+
+12	18	-19.8458	-23.7521	3.90625
+
+Connected Intrazonal Node Angles	12
+
+12	10	-3.90625
+
+12	19	7.14286
+
+12	20	3.90778
+
+12	21	7.66871
+
+12	22	5.03271
+Connected load to node 12 is -11.2 MW
+12	11.2 MW
+
+Generation	13
+
+13	3	1
+
+Intrazonal Node Angles	13
+
+13	19	7.14286	-0	7.14286
+
+Connected Intrazonal Node Angles	13
+
+13	18	-7.14286
+Connected load to node 13 is 0 MW
+13	0 MW
+
+Generation	14
+
+Intrazonal Node Angles	14
+
+14	20	-1.09973	-5.00751	3.90778
+
+Connected Intrazonal Node Angles	14
+
+14	18	-3.90778
+
+14	21	5.00751
+Connected load to node 14 is -6.2 MW
+14	6.2 MW
+
+Generation	15
+
+Intrazonal Node Angles	15
+
+15	21	3.14907	-9.52715	12.6762
+
+Connected Intrazonal Node Angles	15
+
+15	18	-7.66871
+
+15	20	-5.00751
+
+15	24	4.57666
+
+15	29	4.9505
+Connected load to node 15 is -8.2 MW
+15	8.2 MW
+
+Generation	16
+
+Intrazonal Node Angles	16
+
+16	22	-0.167495	-5.20021	5.03271
+
+Connected Intrazonal Node Angles	16
+
+16	18	-5.03271
+
+16	23	5.20021
+Connected load to node 16 is -3.5 MW
+16	3.5 MW
+
+Generation	17
+
+Intrazonal Node Angles	17
+
+17	23	17.0345	-0	17.0345
+
+Connected Intrazonal Node Angles	17
+
+17	16	-11.8343
+
+17	22	-5.20021
+Connected load to node 17 is -9 MW
+17	9 MW
+
+Generation	18
+
+Intrazonal Node Angles	18
+
+18	24	-3.16328	-7.73994	4.57666
+
+Connected Intrazonal Node Angles	18
+
+18	21	-4.57666
+
+18	25	7.73994
+Connected load to node 18 is -3.2 MW
+18	3.2 MW
+
+Generation	19
+
+Intrazonal Node Angles	19
+
+19	25	-6.96594	-14.7059	7.73994
+
+Connected Intrazonal Node Angles	19
+
+19	24	-7.73994
+
+19	26	14.7059
+Connected load to node 19 is -9.5 MW
+19	9.5 MW
+
+Generation	20
+
+Intrazonal Node Angles	20
+
+20	26	19.4906	-0	19.4906
+
+Connected Intrazonal Node Angles	20
+
+20	16	-4.78469
+
+20	25	-14.7059
+Connected load to node 20 is -2.2 MW
+20	2.2 MW
+
+Generation	21
+
+Intrazonal Node Angles	21
+
+21	27	-29.0217	-42.3729	13.3511
+
+Connected Intrazonal Node Angles	21
+
+21	16	-13.3511
+
+21	28	42.3729
+Connected load to node 21 is -17.5 MW
+21	17.5 MW
+
+Generation	22
+
+22	4	1
+
+Intrazonal Node Angles	22
+
+22	28	43.4574	-5.58659	49.044
+
+Connected Intrazonal Node Angles	22
+
+22	16	-6.67111
+
+22	27	-42.3729
+
+22	30	5.58659
+Connected load to node 22 is 0 MW
+22	0 MW
+
+Generation	23
+
+23	5	1
+
+Intrazonal Node Angles	23
+
+23	29	1.24679	-3.7037	4.9505
+
+Connected Intrazonal Node Angles	23
+
+23	21	-4.9505
+
+23	30	3.7037
+Connected load to node 23 is -3.2 MW
+23	3.2 MW
+
+Generation	24
+
+Intrazonal Node Angles	24
+
+24	30	6.25263	-3.03767	9.2903
+
+Connected Intrazonal Node Angles	24
+
+24	28	-5.58659
+
+24	29	-3.7037
+
+24	31	3.03767
+Connected load to node 24 is -8.7 MW
+24	8.7 MW
+
+Generation	25
+
+Intrazonal Node Angles	25
+
+25	31	-4.38548	-7.42315	3.03767
+
+Connected Intrazonal Node Angles	25
+
+25	30	-3.03767
+
+25	32	2.63158
+
+25	33	4.79157
+Connected load to node 25 is 0 MW
+25	0 MW
+
+Generation	26
+
+Intrazonal Node Angles	26
+
+26	32	2.63158	-0	2.63158
+
+Connected Intrazonal Node Angles	26
+
+26	31	-2.63158
+Connected load to node 26 is -3.5 MW
+26	3.5 MW
+
+Generation	27
+
+27	6	1
+
+Intrazonal Node Angles	27
+
+27	33	3.24972	-4.0671	7.31682
+
+Connected Intrazonal Node Angles	27
+
+27	31	-4.79157
+
+27	34	-2.52525
+
+27	35	2.4079
+
+27	36	1.6592
+Connected load to node 27 is 0 MW
+27	0 MW
+
+Generation	28
+
+Intrazonal Node Angles	28
+
+28	34	19.1692	-2.52525	21.6945
+
+Connected Intrazonal Node Angles	28
+
+28	12	-16.6945
+
+28	14	-5
+
+28	33	2.52525
+Connected load to node 28 is 0 MW
+28	0 MW
+
+Generation	29
+
+Intrazonal Node Angles	29
+
+29	35	0.201853	-2.20604	2.4079
+
+Connected Intrazonal Node Angles	29
+
+29	33	-2.4079
+
+29	36	2.20604
+Connected load to node 29 is -2.4 MW
+29	2.4 MW
+
+Generation	30
+
+Intrazonal Node Angles	30
+
+30	36	3.86524	-0	3.86524
+
+Connected Intrazonal Node Angles	30
+
+30	33	-1.6592
+
+30	35	-2.20604
+Connected load to node 30 is -10.6 MW
+30	10.6 MW
+
+Coefficients corresponding to lower generation limits
+31	1	1	0
+31	0 MW
+32	2	1	0
+32	0 MW
+33	3	1	0
+33	0 MW
+34	4	1	0
+34	0 MW
+35	5	1	0
+35	0 MW
+36	6	1	0
+36	0 MW
+
+Coefficients corresponding to upper generation limits
+37	1	1	0.8
+37	80 MW
+38	2	1	0.8
+38	80 MW
+39	3	1	0.4
+39	40 MW
+40	4	1	0.5
+40	50 MW
+41	5	1	0.3
+41	30 MW
+42	6	1	0.55
+42	55 MW
+
+Coefficients corresponding to intra-zone Line Forward Flow Limit Constraints
+
+43	7	17.3913	17.3913
+
+43	8	-17.3913	-	-17.3913
+43	100 MW
+
+44	7	6.05327	6.05327
+
+44	9	-6.05327	-	-6.05327
+44	100 MW
+
+45	8	5.75705	5.75705
+
+45	10	-5.75705	-	-5.75705
+45	100 MW
+
+46	8	5.04286	5.04286
+
+46	11	-5.04286	-	-5.04286
+46	100 MW
+
+47	8	5.67215	5.67215
+
+47	12	-5.67215	-	-5.67215
+47	100 MW
+
+48	9	26.3852	26.3852
+
+48	10	-26.3852	-	-26.3852
+48	100 MW
+
+49	10	24.1546	24.1546
+
+49	12	-24.1546	-	-24.1546
+49	100 MW
+
+50	10	3.90625	3.90625
+
+50	18	-3.90625	-	-3.90625
+50	100 MW
+
+51	11	8.62069	8.62069
+
+51	13	-8.62069	-	-8.62069
+51	100 MW
+
+52	12	12.1951	12.1951
+
+52	13	-12.1951	-	-12.1951
+52	100 MW
+
+53	12	23.8095	23.8095
+
+53	14	-23.8095	-	-23.8095
+53	100 MW
+
+54	12	4.80769	4.80769
+
+54	15	-4.80769	-	-4.80769
+54	100 MW
+
+55	12	1.79856	1.79856
+
+55	16	-1.79856	-	-1.79856
+55	100 MW
+
+56	12	16.6945	16.6945
+
+56	34	-16.6945	-	-16.6945
+56	100 MW
+
+57	14	5	5
+
+57	34	-5	-	-5
+57	100 MW
+
+58	15	9.09091	9.09091
+
+58	16	-9.09091	-	-9.09091
+58	100 MW
+
+59	15	4.80769	4.80769
+
+59	17	-4.80769	-	-4.80769
+59	100 MW
+
+60	16	11.8343	11.8343
+
+60	23	-11.8343	-	-11.8343
+60	100 MW
+
+61	16	4.78469	4.78469
+
+61	26	-4.78469	-	-4.78469
+61	100 MW
+
+62	16	13.3511	13.3511
+
+62	27	-13.3511	-	-13.3511
+62	100 MW
+
+63	16	6.67111	6.67111
+
+63	28	-6.67111	-	-6.67111
+63	100 MW
+
+64	18	7.14286	7.14286
+
+64	19	-7.14286	-	-7.14286
+64	100 MW
+
+65	18	3.90778	3.90778
+
+65	20	-3.90778	-	-3.90778
+65	100 MW
+
+66	18	7.66871	7.66871
+
+66	21	-7.66871	-	-7.66871
+66	100 MW
+
+67	18	5.03271	5.03271
+
+67	22	-5.03271	-	-5.03271
+67	100 MW
+
+68	20	5.00751	5.00751
+
+68	21	-5.00751	-	-5.00751
+68	100 MW
+
+69	21	4.57666	4.57666
+
+69	24	-4.57666	-	-4.57666
+69	100 MW
+
+70	21	4.9505	4.9505
+
+70	29	-4.9505	-	-4.9505
+70	100 MW
+
+71	22	5.20021	5.20021
+
+71	23	-5.20021	-	-5.20021
+71	100 MW
+
+72	24	7.73994	7.73994
+
+72	25	-7.73994	-	-7.73994
+72	100 MW
+
+73	25	14.7059	14.7059
+
+73	26	-14.7059	-	-14.7059
+73	100 MW
+
+74	27	42.3729	42.3729
+
+74	28	-42.3729	-	-42.3729
+74	100 MW
+
+75	28	5.58659	5.58659
+
+75	30	-5.58659	-	-5.58659
+75	100 MW
+
+76	29	3.7037	3.7037
+
+76	30	-3.7037	-	-3.7037
+76	100 MW
+
+77	30	3.03767	3.03767
+
+77	31	-3.03767	-	-3.03767
+77	100 MW
+
+78	31	2.63158	2.63158
+
+78	32	-2.63158	-	-2.63158
+78	100 MW
+
+79	31	4.79157	4.79157
+
+79	33	-4.79157	-	-4.79157
+79	100 MW
+
+80	34	2.52525	2.52525
+
+80	33	-2.52525	-	-2.52525
+80	100 MW
+
+81	33	2.4079	2.4079
+
+81	35	-2.4079	-	-2.4079
+81	100 MW
+
+82	33	1.6592	1.6592
+
+82	36	-1.6592	-	-1.6592
+82	100 MW
+
+83	35	2.20604	2.20604
+
+83	36	-2.20604	-	-2.20604
+83	100 MW
+
+Coefficients corresponding to intra-zone Line Reverse Flow Limit Constraints
+
+84	7	17.3913	17.3913
+
+84	8	-17.3913	-	-17.3913
+84	-100 MW
+
+85	7	6.05327	6.05327
+
+85	9	-6.05327	-	-6.05327
+85	-100 MW
+
+86	8	5.75705	5.75705
+
+86	10	-5.75705	-	-5.75705
+86	-100 MW
+
+87	8	5.04286	5.04286
+
+87	11	-5.04286	-	-5.04286
+87	-100 MW
+
+88	8	5.67215	5.67215
+
+88	12	-5.67215	-	-5.67215
+88	-100 MW
+
+89	9	26.3852	26.3852
+
+89	10	-26.3852	-	-26.3852
+89	-100 MW
+
+90	10	24.1546	24.1546
+
+90	12	-24.1546	-	-24.1546
+90	-100 MW
+
+91	10	3.90625	3.90625
+
+91	18	-3.90625	-	-3.90625
+91	-100 MW
+
+92	11	8.62069	8.62069
+
+92	13	-8.62069	-	-8.62069
+92	-100 MW
+
+93	12	12.1951	12.1951
+
+93	13	-12.1951	-	-12.1951
+93	-100 MW
+
+94	12	23.8095	23.8095
+
+94	14	-23.8095	-	-23.8095
+94	-100 MW
+
+95	12	4.80769	4.80769
+
+95	15	-4.80769	-	-4.80769
+95	-100 MW
+
+96	12	1.79856	1.79856
+
+96	16	-1.79856	-	-1.79856
+96	-100 MW
+
+97	12	16.6945	16.6945
+
+97	34	-16.6945	-	-16.6945
+97	-100 MW
+
+98	14	5	5
+
+98	34	-5	-	-5
+98	-100 MW
+
+99	15	9.09091	9.09091
+
+99	16	-9.09091	-	-9.09091
+99	-100 MW
+
+100	15	4.80769	4.80769
+
+100	17	-4.80769	-	-4.80769
+100	-100 MW
+
+101	16	11.8343	11.8343
+
+101	23	-11.8343	-	-11.8343
+101	-100 MW
+
+102	16	4.78469	4.78469
+
+102	26	-4.78469	-	-4.78469
+102	-100 MW
+
+103	16	13.3511	13.3511
+
+103	27	-13.3511	-	-13.3511
+103	-100 MW
+
+104	16	6.67111	6.67111
+
+104	28	-6.67111	-	-6.67111
+104	-100 MW
+
+105	18	7.14286	7.14286
+
+105	19	-7.14286	-	-7.14286
+105	-100 MW
+
+106	18	3.90778	3.90778
+
+106	20	-3.90778	-	-3.90778
+106	-100 MW
+
+107	18	7.66871	7.66871
+
+107	21	-7.66871	-	-7.66871
+107	-100 MW
+
+108	18	5.03271	5.03271
+
+108	22	-5.03271	-	-5.03271
+108	-100 MW
+
+109	20	5.00751	5.00751
+
+109	21	-5.00751	-	-5.00751
+109	-100 MW
+
+110	21	4.57666	4.57666
+
+110	24	-4.57666	-	-4.57666
+110	-100 MW
+
+111	21	4.9505	4.9505
+
+111	29	-4.9505	-	-4.9505
+111	-100 MW
+
+112	22	5.20021	5.20021
+
+112	23	-5.20021	-	-5.20021
+112	-100 MW
+
+113	24	7.73994	7.73994
+
+113	25	-7.73994	-	-7.73994
+113	-100 MW
+
+114	25	14.7059	14.7059
+
+114	26	-14.7059	-	-14.7059
+114	-100 MW
+
+115	27	42.3729	42.3729
+
+115	28	-42.3729	-	-42.3729
+115	-100 MW
+
+116	28	5.58659	5.58659
+
+116	30	-5.58659	-	-5.58659
+116	-100 MW
+
+117	29	3.7037	3.7037
+
+117	30	-3.7037	-	-3.7037
+117	-100 MW
+
+118	30	3.03767	3.03767
+
+118	31	-3.03767	-	-3.03767
+118	-100 MW
+
+119	31	2.63158	2.63158
+
+119	32	-2.63158	-	-2.63158
+119	-100 MW
+
+120	31	4.79157	4.79157
+
+120	33	-4.79157	-	-4.79157
+120	-100 MW
+
+121	34	2.52525	2.52525
+
+121	33	-2.52525	-	-2.52525
+121	-100 MW
+
+122	33	2.4079	2.4079
+
+122	35	-2.4079	-	-2.4079
+122	-100 MW
+
+123	33	1.6592	1.6592
+
+123	36	-1.6592	-	-1.6592
+123	-100 MW
+
+124	35	2.20604	2.20604
+
+124	36	-2.20604	-	-2.20604
+124	-100 MW
+
+Constraint bounds (rows) Specified
+
+Total number of rows: 124
+
+Coefficient Matrix specified
+
+Total time taken to define the rows, columns, objective and populate the coefficient matrix = 0.001396 s 
+
+The solution to the problem is OPTIMAL.
+
+The Optimal Objective value (Generation Dispatch cost) is: 565.206
+
+Total time taken to solve the MILP Line Construction Decision Making Problem instance and retrieve the results = 0.003413 s 

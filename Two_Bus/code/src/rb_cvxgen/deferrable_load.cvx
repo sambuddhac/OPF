@@ -1,0 +1,21 @@
+dimensions
+  T = 95
+end
+
+parameters
+  c[t] positive, t=0..T # binary {0,1}
+  E positive
+  pmax positive
+  v[t], t=0..T
+end
+
+variables 
+  p[t], t=0..T
+end
+
+minimize
+  sum[t=0..T](square(p[t] - v[t]))
+subject to
+  0 <= p[t] <= pmax, t=0..T
+  sum[t=0..T](c[t]*p[t]) >= E
+end

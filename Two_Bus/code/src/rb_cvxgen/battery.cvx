@@ -1,0 +1,27 @@
+dimensions
+  T = 95
+end
+
+parameters
+  q0 positive
+  #qf positive
+  Q positive
+  P positive
+  v[t], t=0..T
+end
+
+variables 
+  p[t], t=0..T
+  q[t], t=0..T
+  #s[t], t=0..T
+end
+
+minimize
+  sum[t=0..T](square(p[t] - v[t]))
+subject to
+  q[0] == q0
+  #q[T] == qf
+  0 <= q[t] <= Q, t=1..T
+  -P <= p[t] <= P, t=0..T
+  q[t+1] == q[t] + p[t], t=0..T-1
+end

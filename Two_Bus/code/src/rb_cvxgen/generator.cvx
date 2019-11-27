@@ -1,0 +1,24 @@
+dimensions
+  T = 95
+end
+
+parameters
+  rho positive
+  alpha positive
+  beta
+  pmax positive
+  pmin positive
+  S positive
+  v[t], t=0..T
+end
+
+variables 
+  p[t], t=0..T
+end
+
+minimize
+  sum[t=0..T](alpha*square(p[t]) - beta*p[t] + (rho/2)*square(p[t] - v[t]))
+subject to
+  pmin <= -p[t] <= pmax, t=0..T
+  norminf(p[t+1]-p[t]) <= S, t=0..T-1
+end
