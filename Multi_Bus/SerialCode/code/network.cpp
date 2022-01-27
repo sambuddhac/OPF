@@ -16,7 +16,7 @@
 #include "network.h"
 #include "gurobi_c++.h" // includes definition of the GUROBI solver header file
 #define MAX_ITER 80002
-#define LINE_CAP 1000.00
+#define LINE_CAP 100.00
 using namespace std;
 
 Network::Network( int val, int solverChoice )
@@ -206,7 +206,9 @@ void Network::setNetworkVariables( int networkID ) // Function setNetworkVariabl
 				//Resistance:
 				resT = matrixTran[ k ][ ( l + 2 ) ];
 				//Reactance:
-				reacT = matrixTran[ k ][ ( l + 3 ) ];
+				//reacT = matrixTran[ k ][ ( l + 3 ) ];
+				double reacT_int = matrixTran[ k ][ ( l + 3 ) ];
+				reacT = (pow(reacT_int, 2)+pow(resT, 2))/reacT_int;
 				//values of maximum allowable power flow on line in the forward and reverse direction:
 				//Forward direction:
 				//cout << "\nEnter the pu value of the line flow limit (Assumed to be the same for all the lines)\n";
@@ -254,11 +256,11 @@ void Network::setNetworkVariables( int networkID ) // Function setNetworkVariabl
 				//Quadratic Coefficient: 
 				c2 = matrixGen[ i ][ ( j + 1 ) ];
 				//Linear coefficient: 
-				c1 = matrixGen[ i ][ ( j + 2 ) ];
+				c1 = matrixGen[ i ][ ( j + 2 ) ];///100
 				//Constant term: 
 				c0 = matrixGen[ i ][ ( j + 3 ) ];
 				//Maximum Limit: 
-				PgMax = matrixGen[ i ][ ( j + 4 ) ];
+				PgMax = matrixGen[ i ][ ( j + 4 ) ];//*100;
 				//Minimum Limit: 
 				PgMin = matrixGen[ i ][ ( j + 5 ) ];
 			} while ( (c2 < 0 ) || ( c1 < 0 ) || ( PgMax <= 0 ) || ( PgMin < 0 ) || ( PgMax <= PgMin ) ); 
@@ -318,7 +320,7 @@ void Network::setNetworkVariables( int networkID ) // Function setNetworkVariabl
 			do {
 				//value of allowable power consumption capability of load with a negative sign to indicate consumption:
 				//Power Consumption:
-				P_Load = matrixLoad[ j ][ ( k + 1 ) ];
+				P_Load = matrixLoad[ j ][ ( k + 1 ) ];//*100;
 			} while ( -P_Load <= 0 ); // check the bounds and validity of the parameter values
 
 			Loadsolver loadParam( P_Load );	// Instantiate the copy constructor for the load solver object
